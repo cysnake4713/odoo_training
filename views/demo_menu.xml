@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="action_demo_a_detail" model="ir.actions.act_window">
+            <field name="name">查看demo a</field>
+            <field name="res_model">tr.demo.a</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+        <record id="action_demo_b_detail" model="ir.actions.act_window">
+            <field name="name">查看 demo b</field>
+            <field name="res_model">tr.demo.b</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+        <menuitem id="demo_root" name="样例根目录" sequence="1"/>
+        <menuitem id="demo_manager" name="样例子菜单1" parent="demo_root" sequence="5"/>
+        <menuitem id="demo_manager_a" name="样例子菜单2" parent="demo_manager" action="action_demo_a_detail" sequence="5"/>
+
+        <menuitem id="demo_manager_b" name="样例子菜单3 激活 demo b" parent="demo_manager" action="action_demo_b_detail" sequence="10"/>
+    </data>
+</openerp>
